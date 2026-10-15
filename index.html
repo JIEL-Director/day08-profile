@@ -6,163 +6,178 @@
     <title>김민석 — 소개</title>
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
 
     <!-- 상단 네비게이션 바 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">김민석</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold" href="#about">김민석</a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="메뉴 열기">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#about">소개</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">작업</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">특징</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#roadmap">로드맵</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">연락처</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- 메인 컨테이너 -->
     <main class="container my-5 pt-5">
 
-        <!-- 소개 섹션 -->
+        <!-- 소개 -->
         <section id="about" class="py-5">
             <div class="p-5 mb-4 bg-white rounded-4 shadow-sm border">
                 <h2 class="fw-bold mb-4">소개</h2>
                 <div class="row align-items-center">
                     <div class="col-md-4 text-center mb-3 mb-md-0">
-                        <div class="bg-secondary-subtle rounded-4 d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <span class="text-muted fw-bold">프로필 사진</span>
-                        </div>
+                        <img src="me.jpg" alt="김민석 프로필 이미지"
+                             class="img-fluid rounded-4" style="max-height: 200px;">
                     </div>
                     <div class="col-md-8">
-                        <h4 class="fw-bold text-primary mb-3">1인 예비 창업가 김민석입니다.</h4>
-                        <p class="text-secondary leading-relaxed">
-                            새로운 영역에 도전하기 위해 오즈코딩 스쿨에서 개발 역량을 키워가고 있습니다.
-                            <br>
-                            AI 기반 상담용 헤어 스타일링 플랫폼(JIEL)을 기획·개발하고 있으며, 해당 영역의 도메인 지식이나 개발 경험이 전혀 없지만  AI를 활용하여 자체 헤어 변환 엔진 개발을 할 수 있었습니다.
-                            <br>
+                        <h3 class="fs-4 fw-bold text-primary mb-3">1인 예비 창업가 김민석입니다.</h3>
+                        <p class="text-secondary lh-lg">
+                            새로운 영역에 도전하기 위해 오즈코딩 스쿨에서 개발 역량을 키워 가고 있습니다.<br>
+                            AI 기반 상담용 헤어 스타일링 플랫폼(JIEL)을 기획·개발하고 있으며,
+                            해당 영역의 도메인 지식이나 개발 경험이 전혀 없었지만
+                            AI를 활용하여 자체 헤어 변환 엔진을 개발할 수 있었습니다.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-                <!--  특징 세션 -->
-        <section id="projects" class="py-4">
+        <!-- 특징 -->
+        <section id="features" class="py-4">
             <h2 class="fw-bold mb-4">특징</h2>
             <div class="row g-4">
-                <!-- 카드 1 -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold">MBTI</h5>
-                            <p class="card-text text-secondary">ENTJ 입니다.</p>
-                            <a href="#" class="btn btn-outline-primary mt-auto align-self-start">ENTJ 특징</a>
+                            <h3 class="card-title fs-5 fw-bold">MBTI</h3>
+                            <p class="card-text text-secondary">ENTJ입니다.</p>
+                            <button class="btn btn-outline-primary mt-auto align-self-start" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#more-mbti"
+                                    aria-expanded="false" aria-controls="more-mbti">ENTJ 특징</button>
+                            <div class="collapse mt-3" id="more-mbti">
+                                <p class="text-secondary small mb-0">목표를 정하고 계획을 세워 끝까지 밀고 가는 편입니다.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- 카드 2 -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold">취미</h5>
-                            <p class="card-text text-secondary">문제해결, 헬스, 독서, 새로운 기술 배우기 입니다.</p>
-                            <a href="#" class="btn btn-outline-primary mt-auto align-self-start">자세히</a>
+                            <h3 class="card-title fs-5 fw-bold">취미</h3>
+                            <p class="card-text text-secondary">문제 해결, 헬스, 독서, 새로운 기술 배우기입니다.</p>
+                            <button class="btn btn-outline-primary mt-auto align-self-start" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#more-hobby"
+                                    aria-expanded="false" aria-controls="more-hobby">자세히</button>
+                            <div class="collapse mt-3" id="more-hobby">
+                                <p class="text-secondary small mb-0">요즘은 AI 도구로 실제 문제를 풀어 보는 데 시간을 가장 많이 씁니다.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- 카드 3 -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold">경력</h5>
-                            <p class="card-text text-secondary">응급실 간호사, 삼성전자 서비스 기술상담사, 사단법인 행정업무, 건설현장 공무, 영업직 등 </p>
-                            <a href="#" class="btn btn-outline-primary mt-auto align-self-start">자세히</a>
+                            <h3 class="card-title fs-5 fw-bold">경력</h3>
+                            <p class="card-text text-secondary">응급실 간호사 외 다양한 직무 경험</p>
+                            <button class="btn btn-outline-primary mt-auto align-self-start" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#more-career"
+                                    aria-expanded="false" aria-controls="more-career">자세히</button>
+                            <ul class="collapse mt-3 text-secondary small mb-0 ps-3" id="more-career">
+                                <li>응급실 간호사 </li>
+                                <li>삼성전자 서비스 기술상담사</li>
+                                <li>사단법인 행정업무</li>
+                                <li>건설현장 공무</li>
+                                <li>영업직</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- Vision 이미지 섹션 (소개와 작업 사이) -->
-        <section class="py-4 text-center">
-            <div class="card bg-white p-4 rounded-4 shadow-sm border">
-                <h3 class="fw-bold mb-3 text-start fs-5 text-secondary">Vision</h3>
-                <div class="d-flex justify-content-center">
-                    <img src="vision.png" alt="Vision 이미지" class="img-fluid rounded-4 shadow-sm" style="max-width: 100%; height: auto;">
-                </div>
-            </div>
+        <!-- Vision -->
+        <section class="py-4">
+            <figure class="card p-4 rounded-4 border mb-0">
+                <h2 class="fw-bold mb-3 fs-5 text-secondary">Vision</h2>
+                <img src="vision.png" class="img-fluid rounded-4 shadow-sm mx-auto d-block"
+                     alt="미용실에서 디자이너가 태블릿으로 손님에게 시술 전후 헤어스타일을 비교해 보여 주는 장면">
+                <figcaption class="text-muted small mt-2 text-center">AI로 만든 구상 이미지입니다.</figcaption>
+            </figure>
         </section>
 
-        <!-- 로드맵 섹션 -->
-        <section id="projects" class="py-4">
+        <!-- 로드맵 -->
+        <section id="roadmap" class="py-4">
             <h2 class="fw-bold mb-4">로드맵</h2>
             <div class="row g-4">
-                <!-- 카드 1 -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold">1. 오즈코딩스쿨</h5>
-                            <p class="card-text text-secondary">강사님, 매니저님, 코치님, 동료수강생 분들과 함께 서로 돕고 발전하기.</p>
-                            <a href="#" class="btn btn-outline-primary mt-auto align-self-start">보러 가기</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title fs-5 fw-bold">1. 오즈코딩 스쿨</h3>
+                            <p class="card-text text-secondary">강사님, 매니저님, 코치님, 동료 수강생분들과 함께 서로 돕고 발전하기.</p>
                         </div>
                     </div>
                 </div>
-                <!-- 카드 2 -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold">2. 프로잭트 개발</h5>
-                            <p class="card-text text-secondary">실제 프로젝트를 통해 배운 기술과 경험을 적용하고, 팀원들과 협력하여 성과를 내기.</p>
-                            <a href="#" class="btn btn-outline-primary mt-auto align-self-start">보러 가기</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title fs-5 fw-bold">2. 프로젝트 개발</h3>
+                            <p class="card-text text-secondary">실제 프로젝트에 배운 기술과 경험을 적용하고, 팀원들과 협력하여 성과 내기.</p>
                         </div>
                     </div>
                 </div>
-                <!-- 카드 3 -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold">3. 수익 창출</h5>
-                            <p class="card-text text-secondary">실제적인 수익 창출과 수익구조 와 비즈니스 모델 확립하기.</p>
-                            <a href="#" class="btn btn-outline-primary mt-auto align-self-start">자세히</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title fs-5 fw-bold">3. 수익 창출</h3>
+                            <p class="card-text text-secondary">실제 수익을 만들고, 수익 구조와 비즈니스 모델 확립하기.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Workflow 이미지 섹션 (작업과 연락처 사이) -->
-        <section class="py-4 text-center">
-            <div class="card bg-white p-4 rounded-4 shadow-sm border">
-                <h3 class="fw-bold mb-3 text-start fs-5 text-secondary">Workflow</h3>
-                <div class="d-flex justify-content-center">
-                    <img src="workflow.png" alt="Workflow 이미지" class="img-fluid rounded-4 shadow-sm" style="max-width: 100%; height: auto;">
-                </div>
-            </div>
+        <!-- Workflow -->
+        <section class="py-4">
+            <figure class="card p-4 rounded-4 border mb-0">
+                <h2 class="fw-bold mb-3 fs-5 text-secondary">Workflow</h2>
+                <img src="workflow.png" class="img-fluid rounded-4 shadow-sm mx-auto d-block"
+                     alt="JIEL 헤어 변환 파이프라인: 얼굴 윤곽점에서 SAM으로 머리·얼굴 영역을 나눈 뒤 머리 영역 마스크를 만드는 4단계 흐름도">
+                <figcaption class="text-muted small mt-2 text-center">AI로 만든 개념도입니다. 그림 속 일부 글자는 정확하지 않을 수 있습니다.</figcaption>
+            </figure>
         </section>
 
-        <!-- 연락처 섹션 -->
+        <!-- 연락처 -->
         <section id="contact" class="py-5">
             <div class="bg-white p-5 rounded-4 shadow-sm border">
                 <h2 class="fw-bold mb-4">연락처</h2>
-                <form>
+                <!-- 보내기를 누르면 메일 앱이 열린다. you@example.com을 실제 주소로 바꾼다 -->
+                <form action="mailto:you@example.com" method="post" enctype="text/plain">
                     <div class="mb-3">
                         <label for="name" class="form-label fw-semibold">이름 *</label>
-                        <input type="text" class="form-control" id="name" placeholder="이름을 입력해주세요" required>
+                        <input type="text" class="form-control" id="name" name="이름"
+                               placeholder="이름을 입력해 주세요" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label fw-semibold">이메일 *</label>
-                        <input type="email" class="form-control" id="email" placeholder="답장 받을 이메일 주소를 적어주세요" required>
+                        <input type="email" class="form-control" id="email" name="이메일"
+                               placeholder="답장 받을 이메일 주소를 적어 주세요" required>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label fw-semibold">하고 싶은 말</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="메시지를 남겨주세요"></textarea>
+                        <textarea class="form-control" id="message" name="메시지" rows="4"
+                                  placeholder="메시지를 남겨 주세요"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary px-4">보내기</button>
                 </form>
@@ -171,12 +186,11 @@
 
     </main>
 
-    <!-- 푸터 -->
     <footer class="bg-white text-center py-4 text-muted border-top">
-        <small>© 2026 김민석 · 오즈 코딩 스쿨 부트캠프</small>
+        <small>© 2026 김민석 · 오즈코딩 스쿨 부트캠프</small>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle -->
+    <!-- Bootstrap 5 JS Bundle (메뉴 접기, Collapse에 필요) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
